@@ -1,0 +1,11 @@
+2025-04-01 18:26:16,798 - DEBUG - Debug mode is enabled.
+2025-04-01 18:26:16,799 - INFO - Running instance_id: 0
+2025-04-01 18:26:16,808 - INFO - Loaded config from diffusion_sidechain.yaml
+2025-04-01 18:26:16,808 - INFO - Overriding num_epochs to 500
+2025-04-01 18:26:16,888 - INFO - Using device: cuda
+2025-04-01 18:26:16,892 - INFO - Total curated experiments: 15
+2025-04-01 18:26:16,917 - INFO - Loaded dataset 'sidechain_pooled' from latent_reps/sidechain_pooled.h5 with shape (12241, 60)
+2025-04-01 18:26:16,930 - INFO - Normalization: mean=-0.001350, std=0.003657
+2025-04-01 18:26:16,936 - INFO - Experiment 1 with parameters: {'learning_rate': '1e-5', 'num_epochs': 500, 'hidden_dim': 1024, 'model_type': 'mlp_v2', 'beta_start': 5e-06, 'beta_end': 0.02, 'scheduler': 'linear', 'diffusion_steps': 1200}
+2025-04-01 18:26:18,962 - INFO - Loading checkpoint from latent_reps/diff_sidechain/checkpoints/diffusion_exp1.pth
+2025-04-01 18:26:19,553 - INFO - Resumed from epoch 500

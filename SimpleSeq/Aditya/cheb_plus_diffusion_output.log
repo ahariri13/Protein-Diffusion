@@ -1,0 +1,44 @@
+[INFO] 2025-03-27 16:21:49,247 - ProteinReconstruction - Logger initialized.
+[DEBUG] 2025-03-27 16:21:49,247 - ProteinReconstruction - Debug mode is ON.
+[INFO] 2025-03-27 16:21:49,248 - ProteinReconstruction - Using device: cuda
+[INFO] 2025-03-27 16:21:49,250 - ProteinReconstruction - Loading JSON from ../../my_protein.json
+[INFO] 2025-03-27 16:22:47,150 - ProteinReconstruction - Number of frames in JSON: 12241
+[INFO] 2025-03-27 16:23:04,853 - ProteinReconstruction - Parsing PDB: ../heavy_chain.pdb
+[INFO] 2025-03-27 16:23:04,868 - ProteinReconstruction - Found 1091 backbone and 1100 sidechain atoms.
+[INFO] 2025-03-27 16:23:04,868 - ProteinReconstruction - Aligning all frames to the first frame via Kabsch...
+[DEBUG] 2025-03-27 16:23:04,868 - ProteinReconstruction - Reference frame shape: torch.Size([2191, 3])
+[DEBUG] 2025-03-27 16:23:04,871 - ProteinReconstruction - Frame 1: aligned shape = torch.Size([2191, 3])
+[DEBUG] 2025-03-27 16:23:04,872 - ProteinReconstruction - Frame 2: aligned shape = torch.Size([2191, 3])
+[DEBUG] 2025-03-27 16:23:04,873 - ProteinReconstruction - Frame 3: aligned shape = torch.Size([2191, 3])
+[DEBUG] 2025-03-27 16:23:04,873 - ProteinReconstruction - Frame 4: aligned shape = torch.Size([2191, 3])
+[INFO] 2025-03-27 16:23:10,388 - ProteinReconstruction - Each frame contains 2191 heavy atoms.
+[INFO] 2025-03-27 16:23:10,388 - ProteinReconstruction - Building PyG dataset using knn_graph.
+[DEBUG] 2025-03-27 16:24:02,770 - ProteinReconstruction - Initializing HNO with hidden_dim=4, K=4
+[INFO] 2025-03-27 16:24:02,777 - ProteinReconstruction - Training/loading HNO => 2 epochs, LR=0.0001
+[INFO] 2025-03-27 16:24:04,581 - ProteinReconstruction - Loading checkpoint from 'checkpoints/hno_model.pth'
+[INFO] 2025-03-27 16:24:04,606 - ProteinReconstruction - Loaded checkpoint at epoch 2
+[INFO] 2025-03-27 16:24:04,606 - ProteinReconstruction - Starting HNO from epoch=2, total epochs=2, LR=0.0001
+[INFO] 2025-03-27 16:24:04,606 - ProteinReconstruction - Building dataset for decoders using HNO latent embeddings...
+[INFO] 2025-03-27 16:25:31,410 - ProteinReconstruction - Computing z_ref from first aligned frame.
+[DEBUG] 2025-03-27 16:25:31,415 - ProteinReconstruction - [HNO.rep] Input x shape: torch.Size([2191, 3])
+[DEBUG] 2025-03-27 16:25:31,417 - ProteinReconstruction - [HNO.rep] After conv1: torch.Size([2191, 4])
+[DEBUG] 2025-03-27 16:25:31,419 - ProteinReconstruction - [HNO.rep] After conv2: torch.Size([2191, 4])
+[DEBUG] 2025-03-27 16:25:31,421 - ProteinReconstruction - [HNO.rep] After conv3: torch.Size([2191, 4])
+[DEBUG] 2025-03-27 16:25:31,423 - ProteinReconstruction - [HNO.rep] After conv4: torch.Size([2191, 4])
+[DEBUG] 2025-03-27 16:25:31,423 - ProteinReconstruction - z_ref => torch.Size([2191, 4])
+[INFO] 2025-03-27 16:25:31,486 - ProteinReconstruction - Training/loading backbone decoder.
+[INFO] 2025-03-27 16:25:31,489 - ProteinReconstruction - Loading checkpoint from 'checkpoints/decoder_backbone.pth'
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/Aditya/chebnet_with_diffusion.py", line 1022, in <module>
+    main()
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/Aditya/chebnet_with_diffusion.py", line 922, in main
+    backbone_decoder_model = train_backbone_decoder(
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/Aditya/chebnet_with_diffusion.py", line 557, in train_backbone_decoder
+    model, optimizer, start_epoch = load_checkpoint(model, optimizer, checkpoint_path)
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/Aditya/chebnet_with_diffusion.py", line 74, in load_checkpoint
+    checkpoint = torch.load(filename, map_location=device)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/serialization.py", line 797, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/serialization.py", line 283, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory

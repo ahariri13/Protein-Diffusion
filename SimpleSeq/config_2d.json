@@ -1,0 +1,13 @@
+{
+    "hidden": 120,
+    "seed": 0,
+    "batch_size": 50,
+    "knn": 6,
+    "K": 7,
+    "mlp": 4,
+    "window_size": 1,
+    "num_layers": 4,
+    "lr": 0.001,
+    "epochs": 100,
+    "train": true
+}

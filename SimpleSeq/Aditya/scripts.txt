@@ -1,0 +1,64 @@
+Step 1: Initial Run of ChebNet without Diffusion
+python chebnet.py --config param.yaml --debug
+
+*************************************************************
+*************************************************************
+Step 2: Run Diffusion Model
+The script uses command-line arguments. Here's the basic syntax:
+python new_diff.py --config diffusion_backbone.yaml
+
+Additional useful flags:
+To run in debug mode with detailed logs:
+python new_diff.py --config diffusion_backbone.yaml --debug
+
+To specify a particular experiment (e.g., experiment index 2):
+python new_diff.py --config diffusion_backbone.yaml --exp_idx 2
+
+To override the default number of epochs specified in the YAML:
+python new_diff.py --config diffusion_backbone.yaml --num_epochs_override 1000
+
+To run a specific instance ID for parallel jobs (useful for grid searches):
+python new_diff.py --config diffusion_backbone.yaml --instance_id 0
+python new_diff.py --config diffusion_backbone.yaml --instance_id 1
+python new_diff.py --config diffusion_backbone.yaml --instance_id 2
+
+python new_diff.py --config diffusion_sidechain.yaml --instance_id 0
+python new_diff.py --config diffusion_sidechain.yaml --instance_id 1
+python new_diff.py --config diffusion_sidechain.yaml --instance_id 2
+(do the same for diffusion_sidechain.yaml)
+*************************************************************
+*************************************************************
+Step 3: Re-run ChebNet with Diffusion Data
+python chebnet_with_diffusion.py --config param.yaml --debug --use_diffusion --diffused_backbone_h5 latent_reps/diff_backbone/generated_diff_exp1.h5 --diffused_sidechain_h5 latent_reps/diff_sidechain/generated_diff_exp1.h5
+
+*************************************************************
+*************************************************************
+Step 4: Generate PDB Structures from .h5 Files
+Convert .h5 coordinate data files into PDB structure files:
+
+HNO structure generation:
+python h5_to_pdb.py --h5_file structures/hno_reconstructions.h5 --key hno_coords --pdb_file heavy_chain.pdb --output_dir hno --num_files 10
+
+Backbone (decoder 1) structure generation:
+python h5_to_pdb.py --h5_file structures/backbone_coords.h5 --key backbone_coords --pdb_file backbone_heavy_chain.pdb --output_dir bb --num_files 10
+
+Full atom (decoder 2) structure generation:
+python h5_to_pdb.py --h5_file structures/full_coords.h5 --key full_coords --pdb_file heavy_chain.pdb --output_dir sc --num_files 10
+
+Backbone diffusion (decoder 1) structure generation:
+python h5_to_pdb.py --h5_file structures/backbone_coords_diff.h5 --key backbone_coords_diff --pdb_file backbone_heavy_chain.pdb --output_dir bb_diff --num_files 10
+
+Sidechain diffusion (decoder 2) structure generation:
+python h5_to_pdb.py --h5_file structures/full_coords_diff.h5 --key full_coords_diff --pdb_file heavy_chain.pdb --output_dir sc_diff --num_files 10
+
+*************************************************************
+*************************************************************
+Input files required
+
+chebnet_with_diffusion.py - Chebnet script
+my_protein.json – Contains the heavy-atom coordinates (input data for the reconstruction).
+heavy_chain.pdb – The protein structure used as input.
+backbone_heavy_chain.pdb - alpha-C protein structure as input.
+param.yaml – YAML configuration for the ChebNet model.
+diffusion_backbone.yaml – YAML configuration for backbone diffusion.
+diffusion_sidechain.yaml – YAML configuration for sidechain diffusion.

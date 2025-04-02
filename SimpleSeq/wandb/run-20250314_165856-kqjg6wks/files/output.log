@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/xref_simpleSeq.py", line 134, in <module>
+    classify,pooled_backbone_atoms,pooled_sidechain_atoms=model(data.x,data.edge_index,data.batch,data.backbone,dataRef)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/SimpleSeq_V2.py", line 99, in forward
+    phase1=self.mlp(phase1)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (109550x240 and 360x120)
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/xref_simpleSeq.py", line 134, in <module>
+    classify,pooled_backbone_atoms,pooled_sidechain_atoms=model(data.x,data.edge_index,data.batch,data.backbone,dataRef)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/SimpleSeq_V2.py", line 99, in forward
+    phase1=self.mlp(phase1)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (109550x240 and 360x120)

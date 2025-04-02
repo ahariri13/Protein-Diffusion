@@ -1,0 +1,15 @@
+Suggested Execution Workflow
+Train the protein reconstruction pipeline:
+
+python chebnet.py --config config.yaml --debug
+
+
+Train diffusion models (backbone or sidechain):
+Parallel instances (for grid search):
+python new_diff.py --config diffusion_backbone.yaml --instance_id 0 --debug
+python new_diff.py --config diffusion_backbone.yaml --instance_id 1 --debug
+python new_diff.py --config diffusion_backbone.yaml --instance_id 2 --debug
+
+Single experiment:
+python new_diff.py --config diffusion_backbone.yaml --exp_idx 5 --debug
+

@@ -1,0 +1,103 @@
+Info on param.yaml:
+
+json_path: my_protein.json → JSON file that contains heavy-atom coordinates for each frame.
+pdb_filename: heavy_chain.pdb → PDB file used to parse protein structure and extract backbone vs. sidechain atoms.
+
+knn_value: 4 → For building the k-nearest neighbors graph.
+cheb_order: 4 and hidden_dim: 4 → Parameters for the HNO model (a ChebConv-based graph neural network).
+
+Training parameters:
+For HNO training (hno_training): Batch size, learning rate, number of epochs, and checkpoint saving interval.
+For Backbone Decoder training (decoderB_training): Similar training parameters and decoder depth.
+For Sidechain Decoder training (decoderSC_training): Training parameters, decoder depth, and an arch_type (0, 1, or 2) to choose the architecture variant.
+
+Pooling Dimensions:
+pooling_dim_backbone: [30,1] → Defines the output size of the adaptive average pooling in the backbone decoder.
+pooling_dim_sidechain: [10,3] → Defines the output size for the sidechain decoder pooling.
+
+hno_ckpt: hno_model.pth → The file name (within the checkpoints directory) for the HNO model checkpoint.
+
+----------------------------------------------------
+____________________________________________________
+
+File Structure
+
+Before running any script:
+project_directory/
+├── chebnet.py                         # Main protein reconstruction pipeline
+├── new_diff.py                       # Diffusion training script
+├── param.yaml                       # YAML config for script.py
+├── diffusion_backbone.yaml           # YAML config for backbone diffusion
+├── diffusion_sidechain.yaml          # YAML config for sidechain diffusion
+├── my_protein.json                   # Heavy-atom coordinates (input)
+└── heavy_chain.pdb                   # Protein structure (input)
+
+
+After running chebnet.py:
+project_directory/
+├── param.yaml
+├── my_protein.json
+├── heavy_chain.pdb
+├── chebnet.py
+├── new_diff.py
+├── logfile.log                       # Logs from reconstruction script
+├── diffusion_backbone.yaml
+├── diffusion_sidechain.yaml
+│
+├── checkpoints/                      # Model checkpoints
+│   ├── hno_model.pth
+│   ├── decoder_backbone.pth
+│   └── decoder_sidechain.pth
+│
+├── structures/                       # Reconstructed structure outputs
+│   ├── hno_reconstructions.h5
+│   ├── backbone_coords.h5
+│   └── full_coords.h5
+│
+└── latent_reps/                      # Latent (pooled) embeddings
+    ├── backbone_pooled.h5
+    ├── sidechain_pooled.h5
+
+
+
+After running new_diff.py"
+project_directory/
+├── param.yaml
+├── my_protein.json
+├── heavy_chain.pdb
+├── chebnet.py
+├── new_diff.py
+├── logfile.log
+├── diffusion_backbone.yaml
+├── diffusion_sidechain.yaml
+├── diffusion_debug.log              # Log file from diffusion script (if --debug used)
+│
+├── checkpoints/
+│   ├── hno_model.pth
+│   ├── decoder_backbone.pth
+│   └── decoder_sidechain.pth
+│
+├── structures/
+│   ├── hno_reconstructions.h5
+│   ├── backbone_coords.h5
+│   └── full_coords.h5
+│
+└── latent_reps/
+    ├── backbone_pooled.h5
+    ├── sidechain_pooled.h5
+    │
+    ├── diff_backbone/               # Output from backbone diffusion experiments: checkpoints and structures
+    │   ├── diffusion_exp1.pth
+    │   ├── diffusion_exp2.pth
+    │   ├── ...
+    │   ├── generated_diff_exp1.h5
+    │   ├── generated_diff_exp2.h5
+    │   └── ...
+    │
+    └── diff_sidechain/             # Output from sidechain diffusion experiments: checkpoints and structures
+        ├── diffusion_exp1.pth
+        ├── diffusion_exp2.pth
+        ├── ...
+        ├── generated_diff_exp1.h5
+        ├── generated_diff_exp2.h5
+        └── ...

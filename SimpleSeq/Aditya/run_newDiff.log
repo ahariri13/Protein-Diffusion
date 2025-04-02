@@ -1,0 +1,12 @@
+Using device: cuda
+Total curated experiments: 15
+Loaded dataset 'backbone_pooled' with shape: (12241, 40)
+Normalization: mean=0.000301, std=0.002136
+
+Experiment 1 with parameters: {'learning_rate': 1e-05, 'num_epochs': 500, 'hidden_dim': 1024, 'model_type': 'mlp_v2', 'beta_start': 5e-06, 'beta_end': 0.02, 'scheduler': 'linear', 'diffusion_steps': 1200}
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/Aditya/new_diff.py", line 404, in <module>
+    final_loss = train_diffusion_model(net, dataloader, optimizer_instance, local_num_epochs, ckpt_path)
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/Aditya/new_diff.py", line 334, in train_diffusion_model
+    return loss.item()
+UnboundLocalError: local variable 'loss' referenced before assignment

@@ -1,0 +1,17 @@
+Epoch: 000, Loss: 2409.1330, Val_Loss: 1503.9033
+Model saved
+Epoch: 001, Loss: 68.2958, Val_Loss: 9.7104
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/xref_simpleSeq.py", line 299, in <module>
+    np.save('./Reconstructions_Pooling/Real/Trial'+params_list+'.npy',real.reshape(-1,num_residues,3))
+  File "<__array_function__ internals>", line 200, in save
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/numpy/lib/npyio.py", line 518, in save
+    file_ctx = open(file, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: './Reconstructions_Pooling/Real/Trial_mlp4_xref_knn6_K7_window2_hidden120.npy'
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/xref_simpleSeq.py", line 299, in <module>
+    np.save('./Reconstructions_Pooling/Real/Trial'+params_list+'.npy',real.reshape(-1,num_residues,3))
+  File "<__array_function__ internals>", line 200, in save
+  File "/nfs_home/hariri/miniconda3/envs/grop/lib/python3.10/site-packages/numpy/lib/npyio.py", line 518, in save
+    file_ctx = open(file, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: './Reconstructions_Pooling/Real/Trial_mlp4_xref_knn6_K7_window2_hidden120.npy'

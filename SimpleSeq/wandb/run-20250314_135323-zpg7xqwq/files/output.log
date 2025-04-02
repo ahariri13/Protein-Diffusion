@@ -1,0 +1,9 @@
+Epoch: 000, Loss: 2431.4773, Val_Loss: 1522.0195
+Model saved
+Epoch: 001, Loss: 56.4192, Val_Loss: 11.4035
+Epoch: 002, Loss: 6.7885, Val_Loss: 2.7455
+Epoch: 003, Loss: 1.9621, Val_Loss: 1.5815
+Epoch: 004, Loss: 1.5013, Val_Loss: 1.6011
+Epoch: 005, Loss: 1.3860, Val_Loss: 1.3401
+Epoch: 006, Loss: 1.3383, Val_Loss: 1.3267
+(1224, 2191, 3)

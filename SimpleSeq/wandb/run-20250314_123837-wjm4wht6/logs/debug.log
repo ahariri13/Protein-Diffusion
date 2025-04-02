@@ -1,0 +1,29 @@
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Current SDK version is 0.15.2
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Configure stats pid to 1053538
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Loading settings from /nfs_home/hariri/.config/wandb/settings
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Loading settings from /nfs_home/hariri/Allostery/Allos2025/SimpleSeq/wandb/settings
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'xref_simpleSeq.py', 'program': '/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/xref_simpleSeq.py'}
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_init.py:_log_setup():507] Logging user logs to /nfs_home/hariri/Allostery/Allos2025/SimpleSeq/wandb/run-20250314_123837-wjm4wht6/logs/debug.log
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_init.py:_log_setup():508] Logging internal logs to /nfs_home/hariri/Allostery/Allos2025/SimpleSeq/wandb/run-20250314_123837-wjm4wht6/logs/debug-internal.log
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_init.py:init():547] calling init triggers
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'hidden': 120, 'seed': 0, 'batch_size': 50, 'knn': 6, 'K': 7, 'mlp': 4, 'window_size': 2, 'num_layers': 4, 'lr': 0.001, 'epochs': 10, 'train': True}
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_init.py:init():596] starting backend
+2025-03-14 12:38:37,684 INFO    MainThread:1053538 [wandb_init.py:init():600] setting up manager
+2025-03-14 12:38:37,688 INFO    MainThread:1053538 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-14 12:38:37,699 INFO    MainThread:1053538 [wandb_init.py:init():606] backend started and connected
+2025-03-14 12:38:37,705 INFO    MainThread:1053538 [wandb_init.py:init():700] updated telemetry
+2025-03-14 12:38:37,706 INFO    MainThread:1053538 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2025-03-14 12:38:38,231 INFO    MainThread:1053538 [wandb_run.py:_on_init():2177] communicating current version
+2025-03-14 12:38:38,316 INFO    MainThread:1053538 [wandb_run.py:_on_init():2186] got version response upgrade_message: "wandb version 0.19.8 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-03-14 12:38:38,316 INFO    MainThread:1053538 [wandb_init.py:init():787] starting run threads in backend
+2025-03-14 12:38:55,306 INFO    MainThread:1053538 [wandb_run.py:_console_start():2158] atexit reg
+2025-03-14 12:38:55,308 INFO    MainThread:1053538 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2025-03-14 12:38:55,308 INFO    MainThread:1053538 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2025-03-14 12:38:55,308 INFO    MainThread:1053538 [wandb_run.py:_redirect():2103] Redirects installed.
+2025-03-14 12:38:55,311 INFO    MainThread:1053538 [wandb_init.py:init():829] run started, returning control to user process
+2025-03-14 12:38:55,311 INFO    MainThread:1053538 [wandb_run.py:_config_callback():1286] config_cb None None {'hidden': 120, 'seed': 0, 'batch_size': 50, 'knn': 6, 'K': 7, 'mlp': 4, 'window_size': 2, 'num_layers': 4, 'lr': 0.001, 'train': True, 'epochs': 10}
+2025-03-14 13:03:53,155 WARNING MsgRouterThr:1053538 [router.py:message_loop():77] message_loop has been closed

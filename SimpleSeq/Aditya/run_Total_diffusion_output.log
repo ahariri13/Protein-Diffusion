@@ -1,0 +1,348 @@
+[INFO] 2025-04-01 18:26:40,688 - ProteinReconstruction - Logger initialized.
+[DEBUG] 2025-04-01 18:26:40,688 - ProteinReconstruction - Debug mode is ON.
+[INFO] 2025-04-01 18:26:40,688 - ProteinReconstruction - Using device: cuda
+[INFO] 2025-04-01 18:26:40,691 - ProteinReconstruction - Loading JSON from ../../my_protein.json
+[INFO] 2025-04-01 18:27:38,529 - ProteinReconstruction - Number of frames in JSON: 12241
+[INFO] 2025-04-01 18:27:56,293 - ProteinReconstruction - Parsing PDB: ../heavy_chain.pdb
+[INFO] 2025-04-01 18:27:56,304 - ProteinReconstruction - Found 1091 backbone and 1100 sidechain atoms.
+[INFO] 2025-04-01 18:27:56,304 - ProteinReconstruction - Aligning all frames to the first frame via Kabsch...
+[DEBUG] 2025-04-01 18:27:56,304 - ProteinReconstruction - Reference frame shape: torch.Size([2191, 3])
+[DEBUG] 2025-04-01 18:27:56,307 - ProteinReconstruction - Frame 1: aligned shape = torch.Size([2191, 3])
+[DEBUG] 2025-04-01 18:27:56,308 - ProteinReconstruction - Frame 2: aligned shape = torch.Size([2191, 3])
+[DEBUG] 2025-04-01 18:27:56,308 - ProteinReconstruction - Frame 3: aligned shape = torch.Size([2191, 3])
+[DEBUG] 2025-04-01 18:27:56,309 - ProteinReconstruction - Frame 4: aligned shape = torch.Size([2191, 3])
+[INFO] 2025-04-01 18:28:00,896 - ProteinReconstruction - Each frame contains 2191 heavy atoms.
+[INFO] 2025-04-01 18:28:00,897 - ProteinReconstruction - Building PyG dataset using knn_graph.
+[DEBUG] 2025-04-01 18:29:12,592 - ProteinReconstruction - Initializing HNO with hidden_dim=4, K=4
+[INFO] 2025-04-01 18:29:12,609 - ProteinReconstruction - Training/loading HNO => 100 epochs, LR=0.0001
+[INFO] 2025-04-01 18:29:14,417 - ProteinReconstruction - Loading checkpoint from 'checkpoints/hno_model.pth'
+[INFO] 2025-04-01 18:29:14,441 - ProteinReconstruction - Loaded checkpoint at epoch 2
+[INFO] 2025-04-01 18:29:14,441 - ProteinReconstruction - Starting HNO from epoch=2, total epochs=100, LR=0.0001
+[INFO] 2025-04-01 18:29:25,500 - ProteinReconstruction - [HNO] Epoch 3/100 => TRAIN MSE=3149.872274, TEST MSE=3137.538076
+[DEBUG] 2025-04-01 18:29:25,518 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:25,518 - ProteinReconstruction - HNO checkpoint saved at epoch 3 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:35,709 - ProteinReconstruction - [HNO] Epoch 4/100 => TRAIN MSE=3126.265685, TEST MSE=3114.767128
+[DEBUG] 2025-04-01 18:29:35,725 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:35,725 - ProteinReconstruction - HNO checkpoint saved at epoch 4 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:45,914 - ProteinReconstruction - [HNO] Epoch 5/100 => TRAIN MSE=3103.782056, TEST MSE=3092.594838
+[DEBUG] 2025-04-01 18:29:45,931 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:45,931 - ProteinReconstruction - HNO checkpoint saved at epoch 5 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:56,083 - ProteinReconstruction - [HNO] Epoch 6/100 => TRAIN MSE=3081.844268, TEST MSE=3070.667052
+[DEBUG] 2025-04-01 18:29:56,099 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:29:56,099 - ProteinReconstruction - HNO checkpoint saved at epoch 6 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:06,191 - ProteinReconstruction - [HNO] Epoch 7/100 => TRAIN MSE=3060.030957, TEST MSE=3048.939504
+[DEBUG] 2025-04-01 18:30:06,206 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:06,206 - ProteinReconstruction - HNO checkpoint saved at epoch 7 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:16,220 - ProteinReconstruction - [HNO] Epoch 8/100 => TRAIN MSE=3038.392931, TEST MSE=3027.349543
+[DEBUG] 2025-04-01 18:30:16,400 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:16,400 - ProteinReconstruction - HNO checkpoint saved at epoch 8 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:26,369 - ProteinReconstruction - [HNO] Epoch 9/100 => TRAIN MSE=3016.887699, TEST MSE=3005.912931
+[DEBUG] 2025-04-01 18:30:26,386 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:26,387 - ProteinReconstruction - HNO checkpoint saved at epoch 9 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:36,326 - ProteinReconstruction - [HNO] Epoch 10/100 => TRAIN MSE=2995.447640, TEST MSE=2984.565138
+[DEBUG] 2025-04-01 18:30:36,344 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:36,344 - ProteinReconstruction - HNO checkpoint saved at epoch 10 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:46,287 - ProteinReconstruction - [HNO] Epoch 11/100 => TRAIN MSE=2974.129791, TEST MSE=2963.254049
+[DEBUG] 2025-04-01 18:30:46,306 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:46,306 - ProteinReconstruction - HNO checkpoint saved at epoch 11 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:56,028 - ProteinReconstruction - [HNO] Epoch 12/100 => TRAIN MSE=2952.900175, TEST MSE=2942.138218
+[DEBUG] 2025-04-01 18:30:56,043 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:30:56,043 - ProteinReconstruction - HNO checkpoint saved at epoch 12 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:05,999 - ProteinReconstruction - [HNO] Epoch 13/100 => TRAIN MSE=2931.759588, TEST MSE=2921.065224
+[DEBUG] 2025-04-01 18:31:06,016 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:06,016 - ProteinReconstruction - HNO checkpoint saved at epoch 13 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:15,636 - ProteinReconstruction - [HNO] Epoch 14/100 => TRAIN MSE=2910.731229, TEST MSE=2900.122292
+[DEBUG] 2025-04-01 18:31:15,653 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:15,653 - ProteinReconstruction - HNO checkpoint saved at epoch 14 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:25,458 - ProteinReconstruction - [HNO] Epoch 15/100 => TRAIN MSE=2889.820403, TEST MSE=2879.272138
+[DEBUG] 2025-04-01 18:31:25,476 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:25,476 - ProteinReconstruction - HNO checkpoint saved at epoch 15 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:35,233 - ProteinReconstruction - [HNO] Epoch 16/100 => TRAIN MSE=2868.999080, TEST MSE=2858.504268
+[DEBUG] 2025-04-01 18:31:35,251 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:35,251 - ProteinReconstruction - HNO checkpoint saved at epoch 16 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:44,768 - ProteinReconstruction - [HNO] Epoch 17/100 => TRAIN MSE=2848.277466, TEST MSE=2837.857945
+[DEBUG] 2025-04-01 18:31:44,786 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:44,786 - ProteinReconstruction - HNO checkpoint saved at epoch 17 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:54,627 - ProteinReconstruction - [HNO] Epoch 18/100 => TRAIN MSE=2827.649920, TEST MSE=2817.274005
+[DEBUG] 2025-04-01 18:31:54,645 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:31:54,645 - ProteinReconstruction - HNO checkpoint saved at epoch 18 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:04,327 - ProteinReconstruction - [HNO] Epoch 19/100 => TRAIN MSE=2807.108246, TEST MSE=2796.785356
+[DEBUG] 2025-04-01 18:32:04,346 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:04,346 - ProteinReconstruction - HNO checkpoint saved at epoch 19 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:13,830 - ProteinReconstruction - [HNO] Epoch 20/100 => TRAIN MSE=2786.656880, TEST MSE=2776.385492
+[DEBUG] 2025-04-01 18:32:13,848 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:13,848 - ProteinReconstruction - HNO checkpoint saved at epoch 20 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:23,555 - ProteinReconstruction - [HNO] Epoch 21/100 => TRAIN MSE=2766.297213, TEST MSE=2756.067576
+[DEBUG] 2025-04-01 18:32:23,574 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:23,574 - ProteinReconstruction - HNO checkpoint saved at epoch 21 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:33,357 - ProteinReconstruction - [HNO] Epoch 22/100 => TRAIN MSE=2746.018101, TEST MSE=2735.839045
+[DEBUG] 2025-04-01 18:32:33,376 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:33,376 - ProteinReconstruction - HNO checkpoint saved at epoch 22 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:42,850 - ProteinReconstruction - [HNO] Epoch 23/100 => TRAIN MSE=2725.824084, TEST MSE=2715.692294
+[DEBUG] 2025-04-01 18:32:42,871 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:42,871 - ProteinReconstruction - HNO checkpoint saved at epoch 23 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:52,345 - ProteinReconstruction - [HNO] Epoch 24/100 => TRAIN MSE=2705.714952, TEST MSE=2695.614686
+[DEBUG] 2025-04-01 18:32:52,362 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:32:52,362 - ProteinReconstruction - HNO checkpoint saved at epoch 24 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:02,035 - ProteinReconstruction - [HNO] Epoch 25/100 => TRAIN MSE=2685.691110, TEST MSE=2675.638907
+[DEBUG] 2025-04-01 18:33:02,054 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:02,055 - ProteinReconstruction - HNO checkpoint saved at epoch 25 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:11,802 - ProteinReconstruction - [HNO] Epoch 26/100 => TRAIN MSE=2665.750099, TEST MSE=2655.742609
+[DEBUG] 2025-04-01 18:33:11,818 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:11,818 - ProteinReconstruction - HNO checkpoint saved at epoch 26 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:21,331 - ProteinReconstruction - [HNO] Epoch 27/100 => TRAIN MSE=2645.892795, TEST MSE=2635.920489
+[DEBUG] 2025-04-01 18:33:21,346 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:21,347 - ProteinReconstruction - HNO checkpoint saved at epoch 27 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:30,797 - ProteinReconstruction - [HNO] Epoch 28/100 => TRAIN MSE=2626.117654, TEST MSE=2616.183651
+[DEBUG] 2025-04-01 18:33:30,813 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:30,813 - ProteinReconstruction - HNO checkpoint saved at epoch 28 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:40,328 - ProteinReconstruction - [HNO] Epoch 29/100 => TRAIN MSE=2606.430798, TEST MSE=2596.544700
+[DEBUG] 2025-04-01 18:33:41,901 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:41,901 - ProteinReconstruction - HNO checkpoint saved at epoch 29 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:51,870 - ProteinReconstruction - [HNO] Epoch 30/100 => TRAIN MSE=2586.832192, TEST MSE=2576.988192
+[DEBUG] 2025-04-01 18:33:51,886 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:33:51,886 - ProteinReconstruction - HNO checkpoint saved at epoch 30 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:01,591 - ProteinReconstruction - [HNO] Epoch 31/100 => TRAIN MSE=2567.317937, TEST MSE=2557.521040
+[DEBUG] 2025-04-01 18:34:01,608 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:01,608 - ProteinReconstruction - HNO checkpoint saved at epoch 31 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:11,138 - ProteinReconstruction - [HNO] Epoch 32/100 => TRAIN MSE=2547.893014, TEST MSE=2538.141009
+[DEBUG] 2025-04-01 18:34:11,154 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:11,155 - ProteinReconstruction - HNO checkpoint saved at epoch 32 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:20,550 - ProteinReconstruction - [HNO] Epoch 33/100 => TRAIN MSE=2528.551887, TEST MSE=2518.840985
+[DEBUG] 2025-04-01 18:34:20,567 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:20,567 - ProteinReconstruction - HNO checkpoint saved at epoch 33 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:29,988 - ProteinReconstruction - [HNO] Epoch 34/100 => TRAIN MSE=2509.295925, TEST MSE=2499.651351
+[DEBUG] 2025-04-01 18:34:30,005 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:30,005 - ProteinReconstruction - HNO checkpoint saved at epoch 34 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:39,539 - ProteinReconstruction - [HNO] Epoch 35/100 => TRAIN MSE=2490.123606, TEST MSE=2480.496034
+[DEBUG] 2025-04-01 18:34:39,555 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:39,555 - ProteinReconstruction - HNO checkpoint saved at epoch 35 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:49,176 - ProteinReconstruction - [HNO] Epoch 36/100 => TRAIN MSE=2471.035978, TEST MSE=2461.448914
+[DEBUG] 2025-04-01 18:34:49,194 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:49,194 - ProteinReconstruction - HNO checkpoint saved at epoch 36 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:58,870 - ProteinReconstruction - [HNO] Epoch 37/100 => TRAIN MSE=2452.031420, TEST MSE=2442.488782
+[DEBUG] 2025-04-01 18:34:58,887 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:34:58,887 - ProteinReconstruction - HNO checkpoint saved at epoch 37 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:08,388 - ProteinReconstruction - [HNO] Epoch 38/100 => TRAIN MSE=2433.113249, TEST MSE=2423.609645
+[DEBUG] 2025-04-01 18:35:08,408 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:08,408 - ProteinReconstruction - HNO checkpoint saved at epoch 38 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:17,784 - ProteinReconstruction - [HNO] Epoch 39/100 => TRAIN MSE=2414.277123, TEST MSE=2404.816108
+[DEBUG] 2025-04-01 18:35:17,798 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:17,798 - ProteinReconstruction - HNO checkpoint saved at epoch 39 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:27,217 - ProteinReconstruction - [HNO] Epoch 40/100 => TRAIN MSE=2395.525891, TEST MSE=2386.107514
+[DEBUG] 2025-04-01 18:35:27,233 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:27,233 - ProteinReconstruction - HNO checkpoint saved at epoch 40 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:36,709 - ProteinReconstruction - [HNO] Epoch 41/100 => TRAIN MSE=2376.859160, TEST MSE=2367.501135
+[DEBUG] 2025-04-01 18:35:36,725 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:36,725 - ProteinReconstruction - HNO checkpoint saved at epoch 41 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:46,342 - ProteinReconstruction - [HNO] Epoch 42/100 => TRAIN MSE=2358.276748, TEST MSE=2348.942291
+[DEBUG] 2025-04-01 18:35:46,358 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:46,358 - ProteinReconstruction - HNO checkpoint saved at epoch 42 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:56,014 - ProteinReconstruction - [HNO] Epoch 43/100 => TRAIN MSE=2339.777697, TEST MSE=2330.484702
+[DEBUG] 2025-04-01 18:35:56,032 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:35:56,032 - ProteinReconstruction - HNO checkpoint saved at epoch 43 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:05,608 - ProteinReconstruction - [HNO] Epoch 44/100 => TRAIN MSE=2321.363858, TEST MSE=2312.111690
+[DEBUG] 2025-04-01 18:36:05,622 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:05,623 - ProteinReconstruction - HNO checkpoint saved at epoch 44 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:15,020 - ProteinReconstruction - [HNO] Epoch 45/100 => TRAIN MSE=2303.032289, TEST MSE=2293.828550
+[DEBUG] 2025-04-01 18:36:15,034 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:15,034 - ProteinReconstruction - HNO checkpoint saved at epoch 45 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:24,454 - ProteinReconstruction - [HNO] Epoch 46/100 => TRAIN MSE=2284.786304, TEST MSE=2275.620818
+[DEBUG] 2025-04-01 18:36:24,470 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:24,470 - ProteinReconstruction - HNO checkpoint saved at epoch 46 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:33,894 - ProteinReconstruction - [HNO] Epoch 47/100 => TRAIN MSE=2266.626450, TEST MSE=2257.502245
+[DEBUG] 2025-04-01 18:36:33,910 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:33,910 - ProteinReconstruction - HNO checkpoint saved at epoch 47 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:43,495 - ProteinReconstruction - [HNO] Epoch 48/100 => TRAIN MSE=2248.549250, TEST MSE=2239.472041
+[DEBUG] 2025-04-01 18:36:43,511 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:43,511 - ProteinReconstruction - HNO checkpoint saved at epoch 48 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:53,172 - ProteinReconstruction - [HNO] Epoch 49/100 => TRAIN MSE=2230.557031, TEST MSE=2221.517470
+[DEBUG] 2025-04-01 18:36:53,187 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:36:53,187 - ProteinReconstruction - HNO checkpoint saved at epoch 49 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:02,848 - ProteinReconstruction - [HNO] Epoch 50/100 => TRAIN MSE=2212.649061, TEST MSE=2203.656700
+[DEBUG] 2025-04-01 18:37:02,865 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:02,866 - ProteinReconstruction - HNO checkpoint saved at epoch 50 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:12,293 - ProteinReconstruction - [HNO] Epoch 51/100 => TRAIN MSE=2194.825999, TEST MSE=2185.872188
+[DEBUG] 2025-04-01 18:37:12,309 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:12,309 - ProteinReconstruction - HNO checkpoint saved at epoch 51 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:21,732 - ProteinReconstruction - [HNO] Epoch 52/100 => TRAIN MSE=2177.088805, TEST MSE=2168.176698
+[DEBUG] 2025-04-01 18:37:21,748 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:21,748 - ProteinReconstruction - HNO checkpoint saved at epoch 52 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:31,176 - ProteinReconstruction - [HNO] Epoch 53/100 => TRAIN MSE=2159.435922, TEST MSE=2150.566457
+[DEBUG] 2025-04-01 18:37:31,191 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:31,191 - ProteinReconstruction - HNO checkpoint saved at epoch 53 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:40,710 - ProteinReconstruction - [HNO] Epoch 54/100 => TRAIN MSE=2141.868195, TEST MSE=2133.042591
+[DEBUG] 2025-04-01 18:37:40,727 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:40,727 - ProteinReconstruction - HNO checkpoint saved at epoch 54 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:50,353 - ProteinReconstruction - [HNO] Epoch 55/100 => TRAIN MSE=2124.387083, TEST MSE=2115.602466
+[DEBUG] 2025-04-01 18:37:50,369 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:37:50,369 - ProteinReconstruction - HNO checkpoint saved at epoch 55 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:00,007 - ProteinReconstruction - [HNO] Epoch 56/100 => TRAIN MSE=2106.987616, TEST MSE=2098.243294
+[DEBUG] 2025-04-01 18:38:00,022 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:00,022 - ProteinReconstruction - HNO checkpoint saved at epoch 56 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:09,488 - ProteinReconstruction - [HNO] Epoch 57/100 => TRAIN MSE=2089.672554, TEST MSE=2080.974701
+[DEBUG] 2025-04-01 18:38:09,506 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:09,506 - ProteinReconstruction - HNO checkpoint saved at epoch 57 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:18,853 - ProteinReconstruction - [HNO] Epoch 58/100 => TRAIN MSE=2072.446154, TEST MSE=2063.790505
+[DEBUG] 2025-04-01 18:38:18,869 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:18,869 - ProteinReconstruction - HNO checkpoint saved at epoch 58 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:28,267 - ProteinReconstruction - [HNO] Epoch 59/100 => TRAIN MSE=2055.305372, TEST MSE=2046.689708
+[DEBUG] 2025-04-01 18:38:28,283 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:28,283 - ProteinReconstruction - HNO checkpoint saved at epoch 59 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:37,742 - ProteinReconstruction - [HNO] Epoch 60/100 => TRAIN MSE=2038.245185, TEST MSE=2029.673238
+[DEBUG] 2025-04-01 18:38:37,757 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:37,757 - ProteinReconstruction - HNO checkpoint saved at epoch 60 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:47,366 - ProteinReconstruction - [HNO] Epoch 61/100 => TRAIN MSE=2021.271057, TEST MSE=2012.740967
+[DEBUG] 2025-04-01 18:38:47,383 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:47,383 - ProteinReconstruction - HNO checkpoint saved at epoch 61 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:57,033 - ProteinReconstruction - [HNO] Epoch 62/100 => TRAIN MSE=2004.380809, TEST MSE=1995.894382
+[DEBUG] 2025-04-01 18:38:57,050 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:38:57,050 - ProteinReconstruction - HNO checkpoint saved at epoch 62 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:06,607 - ProteinReconstruction - [HNO] Epoch 63/100 => TRAIN MSE=1987.574546, TEST MSE=1979.127868
+[DEBUG] 2025-04-01 18:39:06,623 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:06,623 - ProteinReconstruction - HNO checkpoint saved at epoch 63 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:16,008 - ProteinReconstruction - [HNO] Epoch 64/100 => TRAIN MSE=1970.851073, TEST MSE=1962.447526
+[DEBUG] 2025-04-01 18:39:16,026 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:16,026 - ProteinReconstruction - HNO checkpoint saved at epoch 64 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:25,441 - ProteinReconstruction - [HNO] Epoch 65/100 => TRAIN MSE=1954.212493, TEST MSE=1945.852214
+[DEBUG] 2025-04-01 18:39:25,457 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:25,457 - ProteinReconstruction - HNO checkpoint saved at epoch 65 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:34,905 - ProteinReconstruction - [HNO] Epoch 66/100 => TRAIN MSE=1937.660634, TEST MSE=1929.340498
+[DEBUG] 2025-04-01 18:39:34,921 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:34,921 - ProteinReconstruction - HNO checkpoint saved at epoch 66 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:44,492 - ProteinReconstruction - [HNO] Epoch 67/100 => TRAIN MSE=1921.191646, TEST MSE=1912.912921
+[DEBUG] 2025-04-01 18:39:44,509 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:44,509 - ProteinReconstruction - HNO checkpoint saved at epoch 67 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:54,178 - ProteinReconstruction - [HNO] Epoch 68/100 => TRAIN MSE=1904.804402, TEST MSE=1896.569550
+[DEBUG] 2025-04-01 18:39:54,195 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:39:54,195 - ProteinReconstruction - HNO checkpoint saved at epoch 68 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:03,811 - ProteinReconstruction - [HNO] Epoch 69/100 => TRAIN MSE=1888.503193, TEST MSE=1880.316222
+[DEBUG] 2025-04-01 18:40:03,830 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:03,830 - ProteinReconstruction - HNO checkpoint saved at epoch 69 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:13,244 - ProteinReconstruction - [HNO] Epoch 70/100 => TRAIN MSE=1872.286494, TEST MSE=1864.136156
+[DEBUG] 2025-04-01 18:40:13,259 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:13,259 - ProteinReconstruction - HNO checkpoint saved at epoch 70 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:22,655 - ProteinReconstruction - [HNO] Epoch 71/100 => TRAIN MSE=1856.153134, TEST MSE=1848.044397
+[DEBUG] 2025-04-01 18:40:22,673 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:22,674 - ProteinReconstruction - HNO checkpoint saved at epoch 71 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:32,117 - ProteinReconstruction - [HNO] Epoch 72/100 => TRAIN MSE=1840.103321, TEST MSE=1832.037488
+[DEBUG] 2025-04-01 18:40:32,133 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:32,133 - ProteinReconstruction - HNO checkpoint saved at epoch 72 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:41,667 - ProteinReconstruction - [HNO] Epoch 73/100 => TRAIN MSE=1824.138957, TEST MSE=1816.114762
+[DEBUG] 2025-04-01 18:40:41,683 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:41,683 - ProteinReconstruction - HNO checkpoint saved at epoch 73 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:51,343 - ProteinReconstruction - [HNO] Epoch 74/100 => TRAIN MSE=1808.258048, TEST MSE=1800.276088
+[DEBUG] 2025-04-01 18:40:51,359 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:40:51,359 - ProteinReconstruction - HNO checkpoint saved at epoch 74 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:01,016 - ProteinReconstruction - [HNO] Epoch 75/100 => TRAIN MSE=1792.461456, TEST MSE=1784.521570
+[DEBUG] 2025-04-01 18:41:01,031 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:01,031 - ProteinReconstruction - HNO checkpoint saved at epoch 75 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:10,501 - ProteinReconstruction - [HNO] Epoch 76/100 => TRAIN MSE=1776.748662, TEST MSE=1768.850632
+[DEBUG] 2025-04-01 18:41:10,568 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:10,568 - ProteinReconstruction - HNO checkpoint saved at epoch 76 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:19,961 - ProteinReconstruction - [HNO] Epoch 77/100 => TRAIN MSE=1761.120338, TEST MSE=1753.264277
+[DEBUG] 2025-04-01 18:41:19,978 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:19,978 - ProteinReconstruction - HNO checkpoint saved at epoch 77 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:29,403 - ProteinReconstruction - [HNO] Epoch 78/100 => TRAIN MSE=1745.575591, TEST MSE=1737.765004
+[DEBUG] 2025-04-01 18:41:29,422 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:29,422 - ProteinReconstruction - HNO checkpoint saved at epoch 78 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:38,931 - ProteinReconstruction - [HNO] Epoch 79/100 => TRAIN MSE=1730.115014, TEST MSE=1722.343847
+[DEBUG] 2025-04-01 18:41:38,946 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:38,946 - ProteinReconstruction - HNO checkpoint saved at epoch 79 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:48,585 - ProteinReconstruction - [HNO] Epoch 80/100 => TRAIN MSE=1714.738011, TEST MSE=1707.008898
+[DEBUG] 2025-04-01 18:41:48,601 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:48,601 - ProteinReconstruction - HNO checkpoint saved at epoch 80 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:58,272 - ProteinReconstruction - [HNO] Epoch 81/100 => TRAIN MSE=1699.446153, TEST MSE=1691.758271
+[DEBUG] 2025-04-01 18:41:58,289 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:41:58,289 - ProteinReconstruction - HNO checkpoint saved at epoch 81 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:07,825 - ProteinReconstruction - [HNO] Epoch 82/100 => TRAIN MSE=1684.238298, TEST MSE=1676.591727
+[DEBUG] 2025-04-01 18:42:07,843 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:07,843 - ProteinReconstruction - HNO checkpoint saved at epoch 82 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:17,241 - ProteinReconstruction - [HNO] Epoch 83/100 => TRAIN MSE=1669.113147, TEST MSE=1661.509396
+[DEBUG] 2025-04-01 18:42:17,257 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:17,257 - ProteinReconstruction - HNO checkpoint saved at epoch 83 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:26,663 - ProteinReconstruction - [HNO] Epoch 84/100 => TRAIN MSE=1654.072413, TEST MSE=1646.510945
+[DEBUG] 2025-04-01 18:42:26,680 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:26,680 - ProteinReconstruction - HNO checkpoint saved at epoch 84 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:36,131 - ProteinReconstruction - [HNO] Epoch 85/100 => TRAIN MSE=1639.116513, TEST MSE=1631.596716
+[DEBUG] 2025-04-01 18:42:36,149 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:36,149 - ProteinReconstruction - HNO checkpoint saved at epoch 85 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:45,743 - ProteinReconstruction - [HNO] Epoch 86/100 => TRAIN MSE=1624.243340, TEST MSE=1616.765890
+[DEBUG] 2025-04-01 18:42:46,544 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:46,545 - ProteinReconstruction - HNO checkpoint saved at epoch 86 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:56,311 - ProteinReconstruction - [HNO] Epoch 87/100 => TRAIN MSE=1609.455207, TEST MSE=1602.019371
+[DEBUG] 2025-04-01 18:42:56,329 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:42:56,330 - ProteinReconstruction - HNO checkpoint saved at epoch 87 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:05,922 - ProteinReconstruction - [HNO] Epoch 88/100 => TRAIN MSE=1594.751229, TEST MSE=1587.356856
+[DEBUG] 2025-04-01 18:43:05,939 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:05,940 - ProteinReconstruction - HNO checkpoint saved at epoch 88 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:15,330 - ProteinReconstruction - [HNO] Epoch 89/100 => TRAIN MSE=1580.130060, TEST MSE=1572.779379
+[DEBUG] 2025-04-01 18:43:15,347 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:15,347 - ProteinReconstruction - HNO checkpoint saved at epoch 89 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:24,767 - ProteinReconstruction - [HNO] Epoch 90/100 => TRAIN MSE=1565.594692, TEST MSE=1558.286726
+[DEBUG] 2025-04-01 18:43:24,785 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:24,786 - ProteinReconstruction - HNO checkpoint saved at epoch 90 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:34,254 - ProteinReconstruction - [HNO] Epoch 91/100 => TRAIN MSE=1551.145723, TEST MSE=1543.882446
+[DEBUG] 2025-04-01 18:43:34,271 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:34,272 - ProteinReconstruction - HNO checkpoint saved at epoch 91 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:43,833 - ProteinReconstruction - [HNO] Epoch 92/100 => TRAIN MSE=1536.787801, TEST MSE=1529.569962
+[DEBUG] 2025-04-01 18:43:43,850 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:43,850 - ProteinReconstruction - HNO checkpoint saved at epoch 92 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:53,513 - ProteinReconstruction - [HNO] Epoch 93/100 => TRAIN MSE=1522.522303, TEST MSE=1515.352355
+[DEBUG] 2025-04-01 18:43:53,530 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:43:53,530 - ProteinReconstruction - HNO checkpoint saved at epoch 93 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:03,179 - ProteinReconstruction - [HNO] Epoch 94/100 => TRAIN MSE=1508.349107, TEST MSE=1501.221862
+[DEBUG] 2025-04-01 18:44:03,197 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:03,197 - ProteinReconstruction - HNO checkpoint saved at epoch 94 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:12,630 - ProteinReconstruction - [HNO] Epoch 95/100 => TRAIN MSE=1494.260192, TEST MSE=1487.175033
+[DEBUG] 2025-04-01 18:44:12,646 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:12,646 - ProteinReconstruction - HNO checkpoint saved at epoch 95 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:22,038 - ProteinReconstruction - [HNO] Epoch 96/100 => TRAIN MSE=1480.254342, TEST MSE=1473.211879
+[DEBUG] 2025-04-01 18:44:22,055 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:22,055 - ProteinReconstruction - HNO checkpoint saved at epoch 96 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:31,475 - ProteinReconstruction - [HNO] Epoch 97/100 => TRAIN MSE=1466.333858, TEST MSE=1459.331920
+[DEBUG] 2025-04-01 18:44:31,491 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:31,491 - ProteinReconstruction - HNO checkpoint saved at epoch 97 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:40,999 - ProteinReconstruction - [HNO] Epoch 98/100 => TRAIN MSE=1452.496425, TEST MSE=1445.535949
+[DEBUG] 2025-04-01 18:44:41,016 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:41,016 - ProteinReconstruction - HNO checkpoint saved at epoch 98 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:50,638 - ProteinReconstruction - [HNO] Epoch 99/100 => TRAIN MSE=1438.742424, TEST MSE=1431.825270
+[DEBUG] 2025-04-01 18:44:50,657 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:44:50,658 - ProteinReconstruction - HNO checkpoint saved at epoch 99 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:45:00,323 - ProteinReconstruction - [HNO] Epoch 100/100 => TRAIN MSE=1425.074986, TEST MSE=1418.203645
+[DEBUG] 2025-04-01 18:45:00,339 - ProteinReconstruction - Checkpoint saved to checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:45:00,340 - ProteinReconstruction - HNO checkpoint saved at epoch 100 -> checkpoints/hno_model.pth
+[INFO] 2025-04-01 18:45:00,340 - ProteinReconstruction - Building dataset for decoders using HNO latent embeddings...
+[INFO] 2025-04-01 18:46:10,445 - ProteinReconstruction - Computing z_ref from first aligned frame.
+[DEBUG] 2025-04-01 18:46:10,450 - ProteinReconstruction - [HNO.rep] Input x shape: torch.Size([2191, 3])
+[DEBUG] 2025-04-01 18:46:10,451 - ProteinReconstruction - [HNO.rep] After conv1: torch.Size([2191, 4])
+[DEBUG] 2025-04-01 18:46:10,453 - ProteinReconstruction - [HNO.rep] After conv2: torch.Size([2191, 4])
+[DEBUG] 2025-04-01 18:46:10,454 - ProteinReconstruction - [HNO.rep] After conv3: torch.Size([2191, 4])
+[DEBUG] 2025-04-01 18:46:10,456 - ProteinReconstruction - [HNO.rep] After conv4: torch.Size([2191, 4])
+[DEBUG] 2025-04-01 18:46:10,456 - ProteinReconstruction - z_ref => torch.Size([2191, 4])
+[INFO] 2025-04-01 18:46:10,517 - ProteinReconstruction - Training/loading backbone decoder.
+[INFO] 2025-04-01 18:46:10,521 - ProteinReconstruction - Loading checkpoint from 'checkpoints/decoder_backbone.pth'
+[INFO] 2025-04-01 18:46:10,977 - ProteinReconstruction - Loaded checkpoint at epoch 100
+[INFO] 2025-04-01 18:46:11,647 - ProteinReconstruction - Backbone decoder checkpoint saved to checkpoints/decoder_backbone.pth
+[INFO] 2025-04-01 18:46:11,677 - ProteinReconstruction - Training/loading sidechain decoder.
+[INFO] 2025-04-01 18:46:11,679 - ProteinReconstruction - Loading checkpoint from 'checkpoints/decoder_sidechain.pth'
+[INFO] 2025-04-01 18:46:11,823 - ProteinReconstruction - Loaded checkpoint at epoch 100
+[INFO] 2025-04-01 18:46:11,995 - ProteinReconstruction - Sidechain decoder checkpoint saved to checkpoints/decoder_sidechain.pth
+[INFO] 2025-04-01 18:46:11,996 - ProteinReconstruction - All training tasks completed successfully!
+[INFO] 2025-04-01 18:46:11,996 - ProteinReconstruction - Loading diffused pooled embeddings to override final structure generation.
+3 (5000, 40, 1)
+3 (5000, 20, 3)
+2 (5000, 40)
+2 (5000, 60)
+[INFO] 2025-04-01 18:46:12,147 - ProteinReconstruction - diff_bb_torch => torch.Size([5000, 40]), diff_sc_torch => torch.Size([5000, 60])
+[INFO] 2025-04-01 18:46:12,147 - ProteinReconstruction - Exporting final outputs: HNO, backbone-only coords, full protein.
+[INFO] 2025-04-01 18:46:12,148 - ProteinReconstruction - Number of samples for final export: 12241
+[INFO] 2025-04-01 18:48:04,559 - ProteinReconstruction - Saved normal outputs to: 
+  structures/hno_reconstructions.h5
+  structures/backbone_coords.h5
+  structures/full_coords.h5
+[INFO] 2025-04-01 18:48:04,560 - ProteinReconstruction - Also exporting coords with DIFFUSED pooled embeddings override.
+[INFO] 2025-04-01 18:48:04,560 - ProteinReconstruction - We have N_diff=5000 samples to export with diffused embeddings.
+[INFO] 2025-04-01 18:48:19,353 - ProteinReconstruction - Saved diffusion-based coords to:
+  structures/backbone_coords_diff.h5
+  structures/full_coords_diff.h5

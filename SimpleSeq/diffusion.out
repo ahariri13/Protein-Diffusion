@@ -1,0 +1,91 @@
+Backbone stats - mean shape: torch.Size([1, 1, 150]) std shape: torch.Size([1, 1, 150])
+Training diffusion model on the backbone dataset...
+[Backbone] Epoch 1/40, Loss: 0.556804
+[Backbone] Epoch 2/40, Loss: 0.496127
+[Backbone] Epoch 3/40, Loss: 0.481821
+[Backbone] Epoch 4/40, Loss: 0.476771
+[Backbone] Epoch 5/40, Loss: 0.473896
+[Backbone] Epoch 6/40, Loss: 0.461756
+[Backbone] Epoch 7/40, Loss: 0.459082
+[Backbone] Epoch 8/40, Loss: 0.456551
+[Backbone] Epoch 9/40, Loss: 0.451037
+[Backbone] Epoch 10/40, Loss: 0.452891
+[Backbone] Epoch 11/40, Loss: 0.448370
+[Backbone] Epoch 12/40, Loss: 0.446789
+[Backbone] Epoch 13/40, Loss: 0.447475
+[Backbone] Epoch 14/40, Loss: 0.443185
+[Backbone] Epoch 15/40, Loss: 0.443281
+[Backbone] Epoch 16/40, Loss: 0.434487
+[Backbone] Epoch 17/40, Loss: 0.438967
+[Backbone] Epoch 18/40, Loss: 0.442819
+[Backbone] Epoch 19/40, Loss: 0.431711
+[Backbone] Epoch 20/40, Loss: 0.427072
+[Backbone] Epoch 21/40, Loss: 0.432945
+[Backbone] Epoch 22/40, Loss: 0.433149
+[Backbone] Epoch 23/40, Loss: 0.430905
+[Backbone] Epoch 24/40, Loss: 0.427949
+[Backbone] Epoch 25/40, Loss: 0.425367
+[Backbone] Epoch 26/40, Loss: 0.428228
+[Backbone] Epoch 27/40, Loss: 0.430900
+[Backbone] Epoch 28/40, Loss: 0.426914
+[Backbone] Epoch 29/40, Loss: 0.431991
+[Backbone] Epoch 30/40, Loss: 0.428467
+[Backbone] Epoch 31/40, Loss: 0.424094
+[Backbone] Epoch 32/40, Loss: 0.421758
+[Backbone] Epoch 33/40, Loss: 0.420204
+[Backbone] Epoch 34/40, Loss: 0.422811
+[Backbone] Epoch 35/40, Loss: 0.419664
+[Backbone] Epoch 36/40, Loss: 0.416850
+[Backbone] Epoch 37/40, Loss: 0.415672
+[Backbone] Epoch 38/40, Loss: 0.416217
+[Backbone] Epoch 39/40, Loss: 0.415976
+[Backbone] Epoch 40/40, Loss: 0.419666
+Generated backbone samples shape: torch.Size([64, 10, 150])
+SideChain stats - mean shape: torch.Size([1, 1, 150]) std shape: torch.Size([1, 1, 150])
+
+Training diffusion model on the side chain dataset...
+[SideChain] Epoch 1/40, Loss: 0.563921
+[SideChain] Epoch 2/40, Loss: 0.506204
+[SideChain] Epoch 3/40, Loss: 0.487715
+[SideChain] Epoch 4/40, Loss: 0.471056
+[SideChain] Epoch 5/40, Loss: 0.462884
+[SideChain] Epoch 6/40, Loss: 0.447370
+[SideChain] Epoch 7/40, Loss: 0.442249
+[SideChain] Epoch 8/40, Loss: 0.433659
+[SideChain] Epoch 9/40, Loss: 0.434608
+[SideChain] Epoch 10/40, Loss: 0.428132
+[SideChain] Epoch 11/40, Loss: 0.426759
+[SideChain] Epoch 12/40, Loss: 0.424703
+[SideChain] Epoch 13/40, Loss: 0.420188
+[SideChain] Epoch 14/40, Loss: 0.418503
+[SideChain] Epoch 15/40, Loss: 0.414445
+[SideChain] Epoch 16/40, Loss: 0.414948
+[SideChain] Epoch 17/40, Loss: 0.415061
+[SideChain] Epoch 18/40, Loss: 0.411940
+[SideChain] Epoch 19/40, Loss: 0.412030
+[SideChain] Epoch 20/40, Loss: 0.411654
+[SideChain] Epoch 21/40, Loss: 0.407631
+[SideChain] Epoch 22/40, Loss: 0.402001
+[SideChain] Epoch 23/40, Loss: 0.406772
+[SideChain] Epoch 24/40, Loss: 0.399801
+[SideChain] Epoch 25/40, Loss: 0.406261
+[SideChain] Epoch 26/40, Loss: 0.404006
+[SideChain] Epoch 27/40, Loss: 0.403087
+[SideChain] Epoch 28/40, Loss: 0.395522
+[SideChain] Epoch 29/40, Loss: 0.401082
+[SideChain] Epoch 30/40, Loss: 0.396952
+[SideChain] Epoch 31/40, Loss: 0.401155
+[SideChain] Epoch 32/40, Loss: 0.393261
+[SideChain] Epoch 33/40, Loss: 0.396632
+[SideChain] Epoch 34/40, Loss: 0.393617
+[SideChain] Epoch 35/40, Loss: 0.389008
+[SideChain] Epoch 36/40, Loss: 0.393105
+[SideChain] Epoch 37/40, Loss: 0.393332
+[SideChain] Epoch 38/40, Loss: 0.393739
+[SideChain] Epoch 39/40, Loss: 0.392486
+[SideChain] Epoch 40/40, Loss: 0.387712
+Generated side chain samples shape: torch.Size([64, 10, 150])
+Traceback (most recent call last):
+  File "/nfs_home/hariri/Allostery/Allos2025/SimpleSeq/diffusion.py", line 269, in <module>
+    with open('./SimpleSeq/config_2d.json', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './SimpleSeq/config_2d.json'
